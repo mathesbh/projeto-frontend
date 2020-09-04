@@ -29,13 +29,28 @@
     </header>
     <main>
         <section class="main-feature">
-            <form action="">
+            <form id="form">
                 <label for="name">Nome:</label><br>
                 <input type="text" id="name"><br>
                 <label for="email">Email:</label><br>
                 <input type="email" id="email"><br>
-                <button>Salvar</button>
+                <button id="btnSave" onclick="addUser()">Salvar</button>
             </form>
+            <table>
+                <thead>
+                    <th>Nome:</th>
+                    <th>Email:</th>
+                </thead>
+                <tbody id="tbUsers">
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Usuários Cadastrados</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button id="btnDel">Apagar usuários</button>
         </section>
     </main>
     <footer>Matheus José Salomão Duarte</footer>
@@ -43,7 +58,7 @@
 
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script defer src="js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
