@@ -25,11 +25,12 @@
 <body>
 
     <header>
-        <h1 class="app-title">Cadastro de usuários</h1>
+        <h1 class="app-title">Cadastro de Usuários</h1>
     </header>
     <main>
         <section class="main-feature">
             <form id="form">
+                <h4>Cadastrar</h4>
                 <label for="name">Nome:</label><br>
                 <input type="text" id="name"><br>
                 <label for="email">Email:</label><br>
@@ -37,9 +38,12 @@
                 <button id="btnSave" onclick="addUser()">Salvar</button>
             </form>
             <table>
+                <caption>Usuários Cadastrados</caption>
                 <thead>
-                    <th>Nome:</th>
-                    <th>Email:</th>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                    </tr>
                 </thead>
                 <tbody id="tbUsers">
 
