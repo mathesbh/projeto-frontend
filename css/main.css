@@ -4,20 +4,49 @@ body {
 }
 
 body>header {
-    background-color: #627A14;
+    background-color: #524bbd;
     padding: 1vh 1vw;
     height: 10vh;
     box-sizing: border-box;
     color: #fff;
+    text-align: center;
 }
 
 body>main {
     height: 85vh;
 }
 
+h4 {
+    margin-left: 1%;
+}
+
+table {
+    width: 250px;
+    padding: 1%;
+    margin: 1%;
+}
+
+form {
+    margin: 1%;
+    padding: 1%;
+}
+
+form button {
+    margin-top: 1%;
+}
+
+#btnDel {
+    margin-left: 1%;
+}
+
 body>footer {
     height: 5vh;
-    background-color: #B3CB65;
+    background-color: #524bbd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 h1.app-title {
@@ -29,10 +58,4 @@ section.main-feature {
     background-color: #fbfbfb;
     width: 80vw;
     height: 85vh;
-}
-
-table {
-    border: 1px solid black;
-    padding: 1%;
-    margin: 1%;
 }
