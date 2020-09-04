@@ -30,11 +30,3 @@ section.main-feature {
     width: 80vw;
     height: 85vh;
 }
-
-aside.secundary-feature {
-    float: right;
-    background-color: #6F4D8F;
-    width: 20vw;
-    height: 85vh;
-    color: #fff;
-}
