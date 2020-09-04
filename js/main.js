@@ -1,19 +1,42 @@
 function addUser() {
-    if (localStorage.score) {
-        localStorage.score = Number(localStorage.score) + 1
-    } else {
-        localStorage.score = 1
-    }
 
     const inputName = document.getElementById('name').value
     const inputEmail = document.getElementById('email').value
 
-    const user = JSON.stringify({
-        Nome: inputName,
-        Email: inputEmail,
-    })
+    const dataUser = {
+        name: inputName,
+        email: inputEmail,
+    }
 
+    if (localStorage.getItem('users') === null) {
 
-    localStorage.setItem('user_' + localStorage.score, user)
+        localStorage.setItem('users', JSON.stringify([dataUser]))
 
+    } else {
+
+        localStorage.setItem('users', JSON.stringify([...JSON.parse(localStorage.getItem('users')), dataUser]))
+    }
+
+    showUser(dataUser)
+}
+
+function showUser(user) {
+    const tbUsers = document.getElementById('tbUsers')
+    const linha = tbUsers.insertRow()
+
+    linha.insertCell(0).innerHTML = user.name
+    linha.insertCell(1).innerHTML = user.email
+}
+
+function getUsers() {
+    const users = JSON.parse(localStorage.getItem(localStorage.key(0)))
+
+    users.forEach(user => showUser(user))
+}
+
+getUsers()
+
+function delUsers() {
+    localStorage.clear()
+    document.location.reload(true)
 }
