@@ -1,5 +1,3 @@
-$blue-primary: #20198f;
-$blue-secondary: #362faf;
 header {
     grid-area: l-header;
 }
@@ -8,16 +6,20 @@ main {
     grid-area: l-main;
 }
 
+aside {
+    grid-area: l-aside;
+}
+
 footer {
     grid-area: l-footer;
 }
 
 body {
     display: grid;
-    min-height: 100vh;
+    height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr 50px;
-    grid-template-areas: 'l-header' 'l-main' 'l-footer';
+    grid-template-rows: 80px 1fr 1fr 50px;
+    grid-template-areas: 'l-header' 'l-main' 'l-aside' 'l-footer';
 }
 
 .l-header,

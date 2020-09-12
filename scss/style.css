@@ -1,0 +1,17 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  border: 1px solid red;
+  font: 20px "Vollkorn", serif;
+}
+
+header {
+  border: 1px solid red;
+}
+
+/*# sourceMappingURL=style.css.map */

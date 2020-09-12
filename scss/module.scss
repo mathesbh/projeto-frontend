@@ -1,0 +1,99 @@
+.l-form {
+    max-width: 360px;
+    margin: 5vh auto;
+    &__title {
+        text-align: center;
+        margin: 1vh;
+        color: $blue-secondary;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 6px solid $blue-primary;
+        border-radius: 10px;
+        padding-bottom: 1vh;
+    }
+    &__label {
+        margin-left: 1vh;
+        color: $blue-secondary;
+    }
+    &__input {
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+        height: 30px;
+        padding: 10px;
+        border: 2px solid $blue-primary;
+        border-radius: 8px;
+    }
+    &__btn {
+        display: block;
+        width: 180px;
+        height: 30px;
+        margin: 0 auto;
+        background-color: $blue-secondary;
+        color: whitesmoke;
+        font-size: 1em;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 2px 2px 1px 1px $blue-primary;
+        outline-style: none;
+        &:active {
+            box-shadow: none;
+        }
+    }
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh;
+    &__title {
+        margin: 1vh;
+        font-size: 0.9em;
+        color: $blue-secondary;
+        font-weight: 600;
+    }
+}
+
+th {
+    background-color: $background;
+    width: 180px;
+    height: 30px;
+    color: $blue-primary;
+}
+
+tbody td {
+    text-align: center;
+    width: 180px;
+    height: 30px;
+}
+
+tbody>tr:nth-child(even) {
+    background-color: $background;
+}
+
+@media screen and (min-width: 992px) {
+    .l-form {
+        max-width: 600px;
+        &__title {
+            font-size: 1.3em;
+        }
+        &__input {
+            width: 540px;
+        }
+    }
+    .table__title {
+        font-size: 1.1em;
+    }
+    th {
+        width: 300px;
+    }
+    tbody td {
+        width: 300px;
+    }
+}

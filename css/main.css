@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 18px "Ubuntu", sans-serif;
+}
+
+header {
+  grid-area: l-header;
+}
+
+main {
+  grid-area: l-main;
+}
+
+aside {
+  grid-area: l-aside;
+}
+
+footer {
+  grid-area: l-footer;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr 1fr 50px;
+  grid-template-areas: "l-header" "l-main" "l-aside" "l-footer";
+}
+
+.l-header,
+.l-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #20198f;
+  color: whitesmoke;
+}
+
+.l-form {
+  max-width: 360px;
+  margin: 5vh auto;
+}
+.l-form__title {
+  text-align: center;
+  margin: 1vh;
+  color: #362faf;
+}
+.l-form__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 6px solid #20198f;
+  border-radius: 10px;
+  padding-bottom: 1vh;
+}
+.l-form__label {
+  margin-left: 1vh;
+  color: #362faf;
+}
+.l-form__input {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+  border: 2px solid #20198f;
+  border-radius: 8px;
+}
+.l-form__btn {
+  display: block;
+  width: 180px;
+  height: 30px;
+  margin: 0 auto;
+  background-color: #362faf;
+  color: whitesmoke;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 2px 2px 1px 1px #20198f;
+  outline-style: none;
+}
+.l-form__btn:active {
+  box-shadow: none;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1vh;
+}
+.table__title {
+  margin: 1vh;
+  font-size: 0.9em;
+  color: #362faf;
+  font-weight: 600;
+}
+
+th {
+  background-color: #9c97e4;
+  width: 180px;
+  height: 30px;
+  color: #20198f;
+}
+
+tbody td {
+  text-align: center;
+  width: 180px;
+  height: 30px;
+}
+
+tbody > tr:nth-child(even) {
+  background-color: #9c97e4;
+}
+
+@media screen and (min-width: 992px) {
+  .l-form {
+    max-width: 600px;
+  }
+  .l-form__title {
+    font-size: 1.3em;
+  }
+  .l-form__input {
+    width: 540px;
+  }
+
+  .table__title {
+    font-size: 1.1em;
+  }
+
+  th {
+    width: 300px;
+  }
+
+  tbody td {
+    width: 300px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
