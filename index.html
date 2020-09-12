@@ -6,28 +6,28 @@
     <title>Projeto Front-end</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/main.css">
 
 </head>
 
 <body>
-
-    <header>
+    <header class="l-header">
         <h1>Cadastro de Usuários</h1>
     </header>
     <main>
-        <section class="main-feature">
+        <section class="l-main">
             <form>
-                <h4>Cadastrar</h4>
+                <h4 class="form__title">Cadastrar</h4>
                 <label for="name">Nome:</label><br>
                 <input type="text" id="name"><br>
                 <label for="email">Email:</label><br>
                 <input type="email" id="email"><br>
-                <button id="btnSave" onclick="addUser()">Salvar</button>
+                <button id="form__btn--save" onclick="addUser()">Salvar</button>
             </form>
-            <table>
-                <caption>Usuários Cadastrados</caption>
+            <table class="l-table">
+                <caption class="table__title">Usuários Cadastrados</caption>
                 <thead>
                     <tr>
                         <th>Nome</th>
@@ -38,10 +38,10 @@
 
                 </tbody>
             </table>
-            <button onclick="delUsers()" id="btnDel">Apagar usuários</button>
+            <button onclick="delUsers()" id="table__btn--del">Apagar usuários</button>
         </section>
     </main>
-    <footer>Matheus José Salomão Duarte</footer>
+    <footer class="l-footer">Matheus José Salomão Duarte</footer>
 
     <script defer src="js/main.js"></script>
 </body>
