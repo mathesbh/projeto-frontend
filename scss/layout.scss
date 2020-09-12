@@ -1,0 +1,30 @@
+$blue-primary: #20198f;
+$blue-secondary: #362faf;
+header {
+    grid-area: l-header;
+}
+
+main {
+    grid-area: l-main;
+}
+
+footer {
+    grid-area: l-footer;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 50px;
+    grid-template-areas: 'l-header' 'l-main' 'l-footer';
+}
+
+.l-header,
+.l-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $blue-primary;
+    color: whitesmoke;
+}
