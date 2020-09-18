@@ -21,10 +21,10 @@
             <form class="l-form__form">
                 <h4 class="l-form__title">Cadastrar</h4>
                 <label class="l-form__label" for="name">Nome:</label><br>
-                <input class="l-form__input" type="text" id="name"><br>
+                <input class="l-form__input" type="text" id="name" name="name" required><br>
                 <label class="l-form__label" for="email">Email:</label><br>
-                <input class="l-form__input" type="email" id="email"><br>
-                <button class="l-form__btn" onclick="addUser()">Salvar</button>
+                <input class="l-form__input" type="email" id="email" name="email" required><br>
+                <button class="l-form__btn" id="btn-save" onclick="addUser()">Salvar</button>
             </form>
         </section>
     </main>
@@ -43,7 +43,7 @@
 
                 </tbody>
             </table>
-            <button onclick="delUsers()" id="table__btn--del" class="l-form__btn">Apagar usuários</button>
+            <button onclick="delUsers()" id="btn-del" class="l-form__btn">Apagar usuários</button>
         </section>
     </aside>
     <footer class="l-footer">
