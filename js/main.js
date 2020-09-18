@@ -1,11 +1,11 @@
 function addUser() {
 
-    const inputName = document.getElementById('name').value
-    const inputEmail = document.getElementById('email').value
+    const name = document.getElementById('name').value
+    const email = document.getElementById('email').value
 
     const dataUser = {
-        name: inputName,
-        email: inputEmail,
+        name,
+        email
     }
 
     if (localStorage.getItem('users') === null) {
