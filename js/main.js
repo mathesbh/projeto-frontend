@@ -1,7 +1,24 @@
-function addUser() {
+const btnSave = document.querySelector('#btn-save')
+btnSave.onclick = btn => {
+    btn.preventDefault()
 
-    const name = document.getElementById('name').value
-    const email = document.getElementById('email').value
+    const form = btn.target.parentNode
+    const formData = new FormData(form)
+
+    const name = formData.get('name')
+    const email = formData.get('email')
+
+    if (name === '') {
+        console.log('Form empty name')
+    }
+    if (email === '') {
+        console.log('Form empty email')
+    } else {
+        addUser(name, email)
+    }
+}
+
+function addUser(name, email) {
 
     const dataUser = {
         name,
@@ -18,6 +35,8 @@ function addUser() {
     }
 
     showUser(dataUser)
+
+    document.location.reload(true)
 }
 
 function showUser(user) {
