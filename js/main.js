@@ -46,7 +46,7 @@ function addUser(name, email) {
 
     showUser(dataUser)
 
-    document.location.reload(true)
+    document.location.replace('index.html')
 }
 
 function showUser(user) {
@@ -65,7 +65,9 @@ function getUsers() {
 
 getUsers()
 
+document.getElementById('btn-del').addEventListener('click', delUsers)
+
 function delUsers() {
     localStorage.clear()
-    document.location.reload(true)
+    document.location.replace('index.html')
 }
