@@ -9,13 +9,23 @@ btnSave.onclick = btn => {
     const email = formData.get('email')
 
     if (name === '') {
-        console.log('Form empty name')
+        return alertForm()
     }
     if (email === '') {
-        console.log('Form empty email')
+        return alertForm()
     } else {
         addUser(name, email)
     }
+}
+
+const alertForm = () => {
+    const input = document.querySelector('form')
+
+    const box = document.createElement('div')
+    box.classList.add('l-form__alert--err')
+    box.textContent = 'Atenção! Não pode conter campos em branco.'
+
+    input.appendChild(box)
 }
 
 function addUser(name, email) {

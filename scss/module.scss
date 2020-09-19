@@ -27,6 +27,11 @@
         border: 2px solid $blue-primary;
         border-radius: 8px;
     }
+    &__alert--err {
+        text-align: center;
+        padding: 2%;
+        color: red;
+    }
     &__btn {
         display: block;
         width: 180px;
