@@ -1,4 +1,5 @@
 import './css/main.css'
+import './scss/base.scss'
 
 const btnSave = document.querySelector('#btn-save')
 btnSave.onclick = btn => {
