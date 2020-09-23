@@ -1,3 +1,5 @@
+import './css/main.css'
+
 const btnSave = document.querySelector('#btn-save')
 btnSave.onclick = btn => {
     btn.preventDefault()
